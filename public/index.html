@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-  <script src="main.js"></script>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+
+    <!-- ---------------Navigation Menu -------------------------------------->
+    <div id="homepage-nav-container">
+      <div id="homepage-nav">
+        Yelpington!
+
+       <!-- -----------------Individual restaurant links --------------->
+        <div id="restaurant-links">
+          <a href="../API/blue-cat.json">Blue Cat</a>
+          <a href="../API/churchst-tavern.json">Church St Tavern</a>
+          <a href="../API/el-gato.json">El Gato Cantina</a>
+          <a href="../API/farmhouse.json">farmhouse</a>
+          <a href="../API/sweetwaters.json">sweetwaters</a>
+          <a href="../API/vpb.json">Vermont Pub & Brewery</a>
+        </div>
+
+      </div>
+    </div>
+
+     <!-- -------------------Center of page & Image----- ---------->
+    <div id="center-container">     
+ 
+      </div>
+
+      <div id = footer-container>
+        <div id="map-container"></div>
+      </div>
+  
+
+    <script src="./index.js"></script>
+  </body>
 </html>

@@ -1,0 +1,13 @@
+{
+    "id": "el-gato",
+    "name": "El Gato Cantina",
+    "address": "169 Church Street, Burlington, VT 05401",
+    "phone number": "(802) 363 3639",
+    "hours": ["Sun-Thu: 11:30am - 8:30pm",
+              "Fri-Sat: 11:30am-9:30pm"],
+            
+    "notes": [
+      "Our menu and hours are limited temporarily due to COVID-19.",
+      "Specials: Taco Tuesdays, Wednesday House Margaritas, Thursday Half Priced Nachos",
+      "Free chips & salsa with every order, dine in our take out."    ]   
+}

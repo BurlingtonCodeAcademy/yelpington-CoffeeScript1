@@ -13,11 +13,10 @@ app.get('/api', (request, res) => {
   });
 
 app.get('/api/:restaurant', (request, response) => {
-    response.sendFile(path.resolve(`./API/${params.path.restaurant}`)) // 
+    response.sendFile(path.resolve(`./API/${request.params.restaurant}.json`)) // 
     // LOOK UP HOW TO ACCESS PARAMS
     //You need to change your variable on line 15 to access the params.restauramnt
-//But there's a syntaxes to it that im not familiar with off the top of my head so you'll have to look it up
- 
+//But there's a syntaxes to it that im not familiar with off the top of my head so you'll have to look it up 
 });
 
 app.listen(port,()=> console.log (`listening on port: ${port}`) )

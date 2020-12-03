@@ -25,6 +25,7 @@
   width:100vw;
   color: white;
   font-size: xx-large;
+  justify-content: space-around;
  
 }
 
@@ -33,7 +34,7 @@
 #restaurant-links{
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-items: space-around;
   font-size: large;
   align-items: flex-end;
 }
@@ -55,7 +56,7 @@
 
 /* ------------------------Individual Restaurant Pages-------------------*/
 
-#restaurant-nav-container{ 
+#restNavContainer{ 
   display: flex;
   height:20vh;
   width:100vw;
@@ -64,7 +65,7 @@
   align-items: center;
 }
 
-#restaurant-nav{ 
+#restNav{ 
   display: flex;
   height:20vh;
   width:100vw;

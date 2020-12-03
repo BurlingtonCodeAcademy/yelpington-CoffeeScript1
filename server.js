@@ -1,11 +1,13 @@
-///---------------- imports 
+///---------------- imports---------------------//
+// ---(these are also global variables, they are set as variables then used)
 const express = require('express')
 const app = express()
 const path = require('path')
 const fs = require('fs');
 const port = process.env.PORT || 8000
 
-//---------------middleware
+
+//---------------middleware-------------------//
 app.use(express.static (path.resolve('./public')))
 
 app.get('/api', (request, res) => {
@@ -13,21 +15,11 @@ app.get('/api', (request, res) => {
   });
 
 app.get('/api/:restaurant', (request, response) => {
-    response.sendFile(path.resolve(`./API/${request.params.restaurant}.json`)) // 
-    // LOOK UP HOW TO ACCESS PARAMS
-    //You need to change your variable on line 15 to access the params.restauramnt
-//But there's a syntaxes to it that im not familiar with off the top of my head so you'll have to look it up 
+    response.sendFile(path.resolve(`./API/${request.params.restaurant}.json`))
 });
 
 app.listen(port,()=> console.log (`listening on port: ${port}`) )
 
-// global variables
 
-
-
-
-
-// json files will be linked here, but not imported, instead use route to find the API folder.
-///app.get (read) and app.post (write), depends on syntax
 
 

@@ -56,9 +56,3 @@ fetch(`/api/${restWithoutHash}`)
   });
 
 
-/// for each of these things make a new element, and set the text content of
-// that elmt and put that element on page. which is what is happening on 28
-//28 creates the elememt, 29 sets the text content of the elemtn 
-// and 30 puts the element on the page. 
-
-// put marker on this map using lat long .... 

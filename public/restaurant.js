@@ -24,35 +24,41 @@ let restNotes = document.getElementById("restaurant-notes");
 // ---- this is just a test for me to view a variable in the console.
 console.log(restWithoutHash);
 
+//----- fetching the restaurant object without the #
 fetch(`/api/${restWithoutHash}`)
   .then((response) => response.json())
   .then((restaurantsObj) => {
-	
-	let title = document.createElement("h1")
-	title.textContent = restaurantsObj.name
-	restInfo.appendChild(title);
+    //-----creating elements to append the data/key value pairs in the JSON objects
+    let title = document.createElement("h1");
+    title.textContent = restaurantsObj.name;
+    restInfo.appendChild(title);
 
-	let address = document.createElement("p")
-	address.textContent = restaurantsObj.address
-	restAddress.appendChild(address);
+    let address = document.createElement("p");
+    address.textContent = restaurantsObj.address;
+    restAddress.appendChild(address);
 
-	let phone = document.createElement("p")
-	phone.textContent = restaurantsObj.phone
-	restPhone.appendChild(phone);
+    let phone = document.createElement("p");
+    phone.textContent = restaurantsObj.phone;
+    restPhone.appendChild(phone);
 
-	let hours = document.createElement("p")
-	hours.textContent = restaurantsObj.hours
+    let hours = document.createElement("p");
+    hours.textContent = restaurantsObj.hours;
 	restHours.appendChild(hours);
 
-	let notes = document.getElementById("p")
-	notes.textContent = restaurantsObj.notes
-	restNotes.appendChild(notes)
+	
+	 //------ putting pin for individual restaurant pages on map
+	 L.marker([restaurantsObj.lat, restaurantsObj.long])
+	 .addTo(myMap)
+	 .bindPopup(restaurantsObj.name);
 
-	
-	
-	L.marker([restaurantsObj.lat, restaurantsObj.long]).addTo(myMap).bindPopup(restaurantsObj.name)
-	
-	console.log(restaurantsObj);
+    // ------ iterating through notes array to append to parragraph tag
+    restaurantsObj.notes.forEach((note) => {
+      let parragraph = document.createElement("p");
+      parragraph.textContent = note;
+      restNotes.appendChild(notes);
+    });
+
+   
+
+    console.log(restaurantsObj);
   });
-
-

@@ -15,6 +15,8 @@ L.tileLayer(
 
 let navBar = document.getElementById("restaurant-links");
 
+
+//----- fetching JSON data and iterating through objects
 fetch("/api")
   .then((response) => response.json())
   .then((restaurantsObj) => {
@@ -23,6 +25,7 @@ fetch("/api")
       anchor.href = "restaurant.html#" + restaurant;
       anchor.textContent = restaurant;
       navBar.appendChild(anchor);
+      //----- Putting restaurant pins on map homepage
       fetch(`/api/${restaurant}`)
         .then((response) => response.json())
         .then((singleRestaurant) => {
@@ -30,6 +33,9 @@ fetch("/api")
         });
     });
   });
+
+
+  
 
 
 
